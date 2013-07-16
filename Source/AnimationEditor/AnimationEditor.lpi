@@ -31,25 +31,40 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <Units Count="1">
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="2">
       <Unit0>
         <Filename Value="AnimationEditor.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="AnimationEditor"/>
       </Unit0>
+      <Unit1>
+        <Filename Value="MainWindowUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainWindow"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MainWindowUnit"/>
+      </Unit1>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="AnimationEditor"/>
+      <Filename Value="..\..\Bin\AnimationEditor"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+      <UnitOutputDirectory Value="compiled_junk\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Other>
+      <Verbosity>
+        <ShowSummary Value="True"/>
+      </Verbosity>
       <CompilerMessages>
         <MsgFileName Value=""/>
       </CompilerMessages>

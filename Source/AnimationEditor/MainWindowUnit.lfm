@@ -1,0 +1,42 @@
+object MainWindow: TMainWindow
+  Left = 423
+  Height = 600
+  Top = 149
+  Width = 800
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'MainWindow'
+  ClientHeight = 600
+  ClientWidth = 800
+  Position = poDesktopCenter
+  LCLVersion = '1.1'
+  object ControlsGroupBox: TGroupBox
+    Left = 0
+    Height = 600
+    Top = 0
+    Width = 200
+    Align = alLeft
+    Caption = 'Control'
+    ClientHeight = 582
+    ClientWidth = 196
+    TabOrder = 0
+    object MenuButton: TBitBtn
+      Left = 0
+      Height = 30
+      Top = 0
+      Width = 196
+      Align = alTop
+      Caption = 'Menu'
+      TabOrder = 0
+    end
+  end
+  object ViewPanel: TPanel
+    Left = 200
+    Height = 600
+    Top = 0
+    Width = 600
+    Align = alClient
+    Caption = 'ViewPanel'
+    TabOrder = 1
+  end
+end
