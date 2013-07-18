@@ -1,0 +1,23 @@
+{
+    "Circle":
+    {
+        "Head": 10,
+        "Neck": 5,
+        "ArmL": 5, "ArmR": 5,
+        "HandL": 5, "HandR": 5,
+        "Back": 5,
+        "Ass": 5,
+        "LegL": 5, "LegR": 5,
+        "FeetL": 5, "FeetR": 5
+    },
+    "Pipe":
+    {
+        "Neck": ["Head", "Neck"],
+        "ArmL": ["Neck", "ArmL"], "ArmR": ["Neck", "ArmR"],
+        "HandL": ["ArmL", "HandL"], "HandR": ["ArmR", "HandR"],
+        "Back": ["Neck", "Back"],
+        "Ass": ["Back", "Ass"],
+        "LegL": ["Ass", "LegL"], "LegR": ["Ass", "LegR"],
+        "FeetL": ["LegL", "FeetL"], "FeetR": ["LegR","FeetR"]
+    }
+}

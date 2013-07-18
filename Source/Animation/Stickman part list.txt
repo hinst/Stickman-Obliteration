@@ -1,0 +1,18 @@
+HeadCircle
+NeckPipe
+NeckCircle
+ArmPipe x 2
+ArmCircle x 2
+HandPipe x 2
+HandCircle x 2
+BackPipe
+BackCircle
+AssPipe
+AssPoint
+LegPipe x 2
+LegCircle x 2
+FeetPipe x 2
+FeetCircle x 2
+
+Circle has radius
+Pipe has two connection points

@@ -1,13 +1,16 @@
 object MainWindow: TMainWindow
-  Left = 423
+  Left = 402
   Height = 600
-  Top = 149
+  Top = 178
   Width = 800
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'MainWindow'
   ClientHeight = 600
   ClientWidth = 800
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
   Position = poDesktopCenter
   LCLVersion = '1.1'
   object ControlsGroupBox: TGroupBox
