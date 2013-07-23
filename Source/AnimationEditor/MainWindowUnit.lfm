@@ -25,11 +25,12 @@ object MainWindow: TMainWindow
     TabOrder = 0
     object MenuButton: TBitBtn
       Left = 0
-      Height = 30
+      Height = 22
       Top = 0
       Width = 196
       Align = alTop
       Caption = 'Menu'
+      OnClick = MenuButtonClick
       TabOrder = 0
     end
   end

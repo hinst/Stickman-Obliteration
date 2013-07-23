@@ -3,6 +3,7 @@ unit StickStructureUnit;
 interface
 
 uses
+  SysUtils,
   Classes,
   SmartObjectUnit,
   StringBuilderUnit,
@@ -56,9 +57,14 @@ var
   i: Cardinal;
 begin
   s := TStringBuilder.Create;
+  s.Add('Circles');
+  s.Add(LineEnding);
   for i := 0 to Circles.Size - 1 do
   begin
-
+    s.Add('  ');
+    s.Add(Circles[i].Name);
+    s.Add(' ');
+    s.Add(IntToStr(Circles[i].defaultRadius));
   end;
   s.Free;
 end;

@@ -8,7 +8,8 @@ uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
   ExtCtrls, Buttons,
   zglHeader,
-  LoggerUnit, CommonLog;
+  LoggerUnit,
+  CommonLog, CommonLang, MainMenuUnit, StickStructureUnit, StickStructureJsonLoaderUnit;
 
 type
 
@@ -21,18 +22,21 @@ type
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
+    procedure MenuButtonClick(Sender: TObject);
   private
-    { private declarations }
   protected
     FFirstTimeActivation: Boolean;
     FLog: TLogger;
     FEngineModeActive: Boolean;
+    FMenuMenu: TAnimationEditorMainMenu;
+    procedure SetupMenu;
     procedure FetchEngine;
+    procedure TestLoadStickmanStructure(aSender: TObject);
   public
-    { public declarations }
     property FirstTimeActivation: Boolean read FFirstTimeActivation;
     property Log: TLogger read FLog;
     property EngineModeActive: Boolean read FEngineModeActive;
+    property MenuMenu: TAnimationEditorMainMenu read FMenuMenu;
   end;
 
 var
@@ -103,6 +107,20 @@ begin
   FLog := TLogger.Create(GetGlobalLog);
   Log.Name := 'MainWindow';
   FEngineModeActive := False;
+  SetupMenu;
+end;
+
+procedure TMainWindow.MenuButtonClick(Sender: TObject);
+begin
+  MenuMenu.PopUp;
+end;
+
+procedure TMainWindow.SetupMenu;
+begin
+  MenuButton.Caption := Lang['Menu'];
+  FMenuMenu := TAnimationEditorMainMenu.Create(self);
+  MenuMenu.PopupComponent := MenuButton;
+  MenuMenu.LoadStickmanStructure.OnClick := @TestLoadStickmanStructure;
 end;
 
 procedure TMainWindow.FetchEngine;
@@ -115,6 +133,13 @@ begin
   zgl_Reg(SYS_LOAD, @LoadEngineHandler);
   zgl_Reg(SYS_DRAW, @EngineDrawHandler);
   zgl_InitToHandle(ViewPanel.Handle);
+end;
+
+procedure TMainWindow.TestLoadStickmanStructure(aSender: TObject);
+var
+  structure: TStickStructure;
+begin
+
 end;
 
 end.

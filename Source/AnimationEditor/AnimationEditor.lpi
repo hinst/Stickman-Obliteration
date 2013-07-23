@@ -13,6 +13,7 @@
       <Title Value="AnimationEditor"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
     </General>
     <i18n>
       <EnableI18N LFM="False"/>
@@ -31,27 +32,33 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="6">
+    <RequiredPackages Count="8">
       <Item1>
-        <PackageName Value="FPC_StringBuilder"/>
+        <PackageName Value="fpgui_toolkit"/>
       </Item1>
       <Item2>
-        <PackageName Value="fcl_stl"/>
+        <PackageName Value="HinstLanguage"/>
       </Item2>
       <Item3>
-        <PackageName Value="HinstFPCSmartObject"/>
+        <PackageName Value="FPC_StringBuilder"/>
       </Item3>
       <Item4>
-        <PackageName Value="ZenGLHinstFork"/>
+        <PackageName Value="fcl_stl"/>
       </Item4>
       <Item5>
-        <PackageName Value="HinstFPCSmartLog"/>
+        <PackageName Value="HinstFPCSmartObject"/>
       </Item5>
       <Item6>
-        <PackageName Value="LCL"/>
+        <PackageName Value="ZenGLHinstFork"/>
       </Item6>
+      <Item7>
+        <PackageName Value="HinstFPCSmartLog"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="LCL"/>
+      </Item8>
     </RequiredPackages>
-    <Units Count="7">
+    <Units Count="11">
       <Unit0>
         <Filename Value="AnimationEditor.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -88,6 +95,25 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="StickStructureJsonLoaderUnit"/>
       </Unit6>
+      <Unit7>
+        <Filename Value="MainMenuUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="MainMenuUnit"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\CommonLang.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CommonLang"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\CommonLang.json"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Unit1"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="MainResources.rc"/>
+        <IsPartOfProject Value="True"/>
+      </Unit10>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -98,7 +124,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\Animation"/>
+      <OtherUnitFiles Value="..\Animation;.."/>
       <UnitOutputDirectory Value="compiled_junk\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Other>

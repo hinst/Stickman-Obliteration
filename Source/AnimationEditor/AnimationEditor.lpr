@@ -4,7 +4,8 @@ uses
   Interfaces,
   Forms,
   CommonLog,
-  MainWindowUnit, StickStructureUnit, StickStructureJsonLoaderUnit;
+  MainWindowUnit, StickStructureUnit, StickStructureJsonLoaderUnit,
+  MainMenuUnit, CommonLang;
 
 procedure WidgetsetApplicationRoutine;
 begin
@@ -13,9 +14,15 @@ begin
   Application.Run;
 end;
 
+{$R *.res}
+
+{$R MainResources.rc}
+
 begin
   StartupGlobalLog;
+  LoadGlobalLanguage;
   WidgetsetApplicationRoutine;
+  ReleaseGlobalLanguage;
   ShutdownGlobalLog;
 end.
 
