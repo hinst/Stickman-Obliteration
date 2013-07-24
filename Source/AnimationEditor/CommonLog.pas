@@ -11,8 +11,8 @@ uses
 
 procedure StartupGlobalLog;
 
-function GetGlobalLog: TLogger;
-function GetGlobalRootLog: TRootLogger;
+function GetGlobalLog: TLogger; inline;
+function GetGlobalRootLog: TRootLogger; inline;
 
 procedure ShutdownGlobalLog;
 

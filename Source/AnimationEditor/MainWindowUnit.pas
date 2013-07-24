@@ -22,6 +22,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
     procedure MenuButtonClick(Sender: TObject);
   private
   protected
@@ -32,6 +33,7 @@ type
     procedure SetupMenu;
     procedure FetchEngine;
     procedure TestLoadStickmanStructure(aSender: TObject);
+    procedure TestThrowStickmanStructure(aSender: TObject);
   public
     property FirstTimeActivation: Boolean read FFirstTimeActivation;
     property Log: TLogger read FLog;
@@ -110,6 +112,11 @@ begin
   SetupMenu;
 end;
 
+procedure TMainWindow.FormDestroy(Sender: TObject);
+begin
+  Log.Free;
+end;
+
 procedure TMainWindow.MenuButtonClick(Sender: TObject);
 begin
   MenuMenu.PopUp;
@@ -136,8 +143,18 @@ begin
 end;
 
 procedure TMainWindow.TestLoadStickmanStructure(aSender: TObject);
+const
+  FileName = '..\Source\Animation\StickmanStructure.json';
 var
   structure: TStickStructure;
+begin
+  Log.Write('Now loading stickman structure from file: "' + FileName + '"');
+  structure := CreateStickStructureFromJsonFile(FileName);
+  Log.Write(structure.ToDebugText);
+  structure.Free;
+end;
+
+procedure TMainWindow.TestThrowStickmanStructure(aSender: TObject);
 begin
 
 end;

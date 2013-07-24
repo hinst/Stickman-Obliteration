@@ -5,7 +5,7 @@ uses
   Forms,
   CommonLog,
   MainWindowUnit, StickStructureUnit, StickStructureJsonLoaderUnit,
-  MainMenuUnit, CommonLang;
+  MainMenuUnit, CommonLang, StickStructureStateUnit, SquaredPointUnit;
 
 procedure WidgetsetApplicationRoutine;
 begin

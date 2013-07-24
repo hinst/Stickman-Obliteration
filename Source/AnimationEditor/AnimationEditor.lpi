@@ -58,7 +58,7 @@
         <PackageName Value="LCL"/>
       </Item8>
     </RequiredPackages>
-    <Units Count="11">
+    <Units Count="13">
       <Unit0>
         <Filename Value="AnimationEditor.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -108,12 +108,21 @@
       <Unit9>
         <Filename Value="..\CommonLang.json"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="Unit1"/>
       </Unit9>
       <Unit10>
         <Filename Value="MainResources.rc"/>
         <IsPartOfProject Value="True"/>
       </Unit10>
+      <Unit11>
+        <Filename Value="..\Animation\StickStructureStateUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="StickStructureStateUnit"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="SquaredPointUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SquaredPointUnit"/>
+      </Unit12>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -127,6 +136,11 @@
       <OtherUnitFiles Value="..\Animation;.."/>
       <UnitOutputDirectory Value="compiled_junk\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
+    <Linking>
+      <Debugging>
+        <UseHeaptrc Value="True"/>
+      </Debugging>
+    </Linking>
     <Other>
       <Verbosity>
         <ShowSummary Value="True"/>
